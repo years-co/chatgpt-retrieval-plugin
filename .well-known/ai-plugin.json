@@ -1,19 +1,19 @@
 {
   "schema_version": "v1",
-  "name_for_model": "retrieval",
-  "name_for_human": "Retrieval Plugin",
-  "description_for_model": "Plugin for searching through the user's documents (such as files, emails, and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in their personal information.",
-  "description_for_human": "Search through your documents.",
+  "name_for_model": "longevity_faq_db",
+  "name_for_human": "YEARS Longevity FAQ",
+  "description_for_model": "Plugin for searching through the YEARS Longevity Knowledge Platform to find answers to questions and retrieve relevant information about the newest scientific research findings related to the topics of aging and longevity. Use it whenever a user asks something that might be found in this database.",
+  "description_for_human": "Search through the YEARS Longevity Knowledge Platform.",
   "auth": {
     "type": "user_http",
     "authorization_type": "bearer"
   },
   "api": {
     "type": "openapi",
-    "url": "https://your-app-url.com/.well-known/openapi.yaml",
+    "url": "https://chatgpt-longevity-plugin-2exib.ondigitalocean.app/.well-known/openapi.yaml",
     "has_user_authentication": false
   },
-  "logo_url": "https://your-app-url.com/.well-known/logo.png",
-  "contact_email": "hello@contact.com", 
-  "legal_info_url": "http://example.com/legal-info"
+  "logo_url": "https://chatgpt-longevity-plugin-2exib.ondigitalocean.app/.well-known/logo.png",
+  "contact_email": "info@years.co", 
+  "legal_info_url": "info@years.co"
 }
