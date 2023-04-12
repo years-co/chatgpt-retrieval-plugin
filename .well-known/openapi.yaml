@@ -3,8 +3,8 @@ info:
   title: Retrieval Plugin API
   description: A retrieval API for querying and filtering documents based on natural language queries and metadata
   version: 1.0.0
-  servers:
-    - url: https://chatgpt-longevity-plugin-2exib.ondigitalocean.app
+servers:
+  - url: https://chatgpt-longevity-plugin-2exib.ondigitalocean.app
 paths:
   /query:
     post:
@@ -15,21 +15,21 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/QueryRequest"
+              $ref: '#/components/schemas/QueryRequest'
         required: true
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/QueryResponse"
-        "422":
+                $ref: '#/components/schemas/QueryResponse'
+        '422':
           description: Validation Error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/HTTPValidationError"
+                $ref: '#/components/schemas/HTTPValidationError'
       security:
         - HTTPBearer: []
 components:
@@ -39,18 +39,63 @@ components:
       type: object
       properties:
         source:
-          $ref: "#/components/schemas/Source"
+          $ref: '#/components/schemas/Source'
         source_id:
           title: Source Id
-          type: string
-        url:
-          title: Url
           type: string
         created_at:
           title: Created At
           type: string
         author:
           title: Author
+          type: string
+        url:
+          title: URL
+          type: string
+        rank:
+          title: Rank
+          type: string
+        title:
+          title: Title
+          type: string
+        pmid:
+          title: PMID
+          type: string
+        search_engine:
+          title: Search Engine
+          type: string
+        year:
+          title: Year
+          type: string
+        journal:
+          title: Journal
+          type: string
+        research_article:
+          title: Research Article
+          type: string
+        clinical_article:
+          title: Clinical Article
+          type: string
+        number_of_citations_from_clinical_articles:
+          title: Number Of Citations From Clinical Articles
+          type: string
+        human:
+          title: Human
+          type: string
+        animal:
+          title: Animal
+          type: string
+        molecular_cellular:
+          title: Molecular Cellular
+          type: string
+        nih_percentile:
+          title: NIH Percentile
+          type: string
+        number_of_citations:
+          title: Number Of Citations
+          type: string
+        approximate_potential_to_translate:
+          title: Approximate Potential To Translate
           type: string
         document_id:
           title: Document Id
@@ -70,7 +115,7 @@ components:
           title: Text
           type: string
         metadata:
-          $ref: "#/components/schemas/DocumentChunkMetadata"
+          $ref: '#/components/schemas/DocumentChunkMetadata'
         embedding:
           title: Embedding
           type: array
@@ -87,7 +132,7 @@ components:
           title: Document Id
           type: string
         source:
-          $ref: "#/components/schemas/Source"
+          $ref: '#/components/schemas/Source'
         source_id:
           title: Source Id
           type: string
@@ -100,6 +145,54 @@ components:
         end_date:
           title: End Date
           type: string
+        url:
+          title: URL
+          type: string
+        rank:
+          title: Rank
+          type: string
+        title:
+          title: Title
+          type: string
+        pmid:
+          title: PMID
+          type: string
+        search_engine:
+          title: Search Engine
+          type: string
+        year:
+          title: Year
+          type: string
+        journal:
+          title: Journal
+          type: string
+        research_article:
+          title: Research Article
+          type: string
+        clinical_article:
+          title: Clinical Article
+          type: string
+        number_of_citations_from_clinical_articles:
+          title: Number Of Citations From Clinical Articles
+          type: string
+        human:
+          title: Human
+          type: string
+        animal:
+          title: Animal
+          type: string
+        molecular_cellular:
+          title: Molecular Cellular
+          type: string
+        nih_percentile:
+          title: NIH Percentile
+          type: string
+        number_of_citations:
+          title: Number Of Citations
+          type: string
+        approximate_potential_to_translate:
+          title: Approximate Potential To Translate
+          type: string
     HTTPValidationError:
       title: HTTPValidationError
       type: object
@@ -108,7 +201,7 @@ components:
           title: Detail
           type: array
           items:
-            $ref: "#/components/schemas/ValidationError"
+            $ref: '#/components/schemas/ValidationError'
     Query:
       title: Query
       required:
@@ -119,7 +212,7 @@ components:
           title: Query
           type: string
         filter:
-          $ref: "#/components/schemas/DocumentMetadataFilter"
+          $ref: '#/components/schemas/DocumentMetadataFilter'
         top_k:
           title: Top K
           type: integer
@@ -134,7 +227,7 @@ components:
           title: Queries
           type: array
           items:
-            $ref: "#/components/schemas/Query"
+            $ref: '#/components/schemas/Query'
     QueryResponse:
       title: QueryResponse
       required:
@@ -145,7 +238,7 @@ components:
           title: Results
           type: array
           items:
-            $ref: "#/components/schemas/QueryResult"
+            $ref: '#/components/schemas/QueryResult'
     QueryResult:
       title: QueryResult
       required:
@@ -160,7 +253,7 @@ components:
           title: Results
           type: array
           items:
-            $ref: "#/components/schemas/DocumentChunkWithScore"
+            $ref: '#/components/schemas/DocumentChunkWithScore'
     Source:
       title: Source
       enum:

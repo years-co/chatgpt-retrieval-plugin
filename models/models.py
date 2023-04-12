@@ -12,9 +12,24 @@ class Source(str, Enum):
 class DocumentMetadata(BaseModel):
     source: Optional[Source] = None
     source_id: Optional[str] = None
-    url: Optional[str] = None
     created_at: Optional[str] = None
     author: Optional[str] = None
+    url: Optional[str] = None
+    rank: Optional[str] = None
+    title: Optional[str] = None
+    pmid: Optional[str] = None
+    search_engine: Optional[str] = None
+    year: Optional[str] = None
+    journal: Optional[str] = None
+    research_article: Optional[str] = None
+    clinical_article: Optional[str] = None
+    number_of_citations_from_clinical_articles: Optional[str] = None
+    human: Optional[str] = None
+    animal: Optional[str] = None
+    molecular_cellular: Optional[str] = None
+    nih_percentile: Optional[str] = None
+    number_of_citations: Optional[str] = None
+    approximate_potential_to_translate: Optional[str] = None
 
 
 class DocumentChunkMetadata(DocumentMetadata):
@@ -49,6 +64,22 @@ class DocumentMetadataFilter(BaseModel):
     author: Optional[str] = None
     start_date: Optional[str] = None  # any date string format
     end_date: Optional[str] = None  # any date string format
+    url: Optional[str] = None
+    rank: Optional[str] = None
+    title: Optional[str] = None
+    pmid: Optional[str] = None
+    search_engine: Optional[str] = None
+    year: Optional[str] = None
+    journal: Optional[str] = None
+    research_article: Optional[str] = None
+    clinical_article: Optional[str] = None
+    number_of_citations_from_clinical_articles: Optional[str] = None
+    human: Optional[str] = None
+    animal: Optional[str] = None
+    molecular_cellular: Optional[str] = None
+    nih_percentile: Optional[str] = None
+    number_of_citations: Optional[str] = None
+    approximate_potential_to_translate: Optional[str] = None
 
 
 class Query(BaseModel):
