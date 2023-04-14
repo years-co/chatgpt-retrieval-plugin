@@ -5,8 +5,7 @@
   "description_for_model": "Plugin for searching through the YEARS Longevity Knowledge Platform to find answers to questions and retrieve relevant information about the newest scientific research findings related to the topics of aging and longevity. Use it whenever a user asks something that might be found in this database.",
   "description_for_human": "Search through the YEARS Longevity Knowledge Platform.",
   "auth": {
-    "type": "user_http",
-    "authorization_type": "bearer"
+    "type": "none"
   },
   "api": {
     "type": "openapi",
