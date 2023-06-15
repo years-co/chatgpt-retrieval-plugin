@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_model": "longevity_faq_db",
   "name_for_human": "YEARS Longevity FAQ",
-  "description_for_model": "The plugin can be used to answer questions about the relationship between specific blood parameters or other biomarkers and aging, aging related diseases and longevity. Answers should have the following 3 paragraphs 1) overview of results found in different cohorts and studies 2) summary of results 3) list of links to sources. The first paragraph should give an overview of the results that different studies found without going into too many statistical details. Every statement has to be backed up by a source that is mentioned at the end of the statement. The second paragraph should summarize these results in an easy to understand way. In the third paragraph, a list of links to the sources that were used in the first paragraph are provided.",
-  "description_for_human": "Answer questions about the relationship between specific blood parameters or other biomarkers and aging, aging-related diseases, or longevity.",
+  "description_for_model": "Plugin for searching through the YEARS Longevity Knowledge Platform to find answers to questions and retrieve relevant information about the newest scientific research findings related to the topics of aging and longevity. Use it whenever a user asks something that might be found in this database.",
+  "description_for_human": "Search through the YEARS Longevity Knowledge Platform.",
   "auth": {
     "type": "none"
   },
